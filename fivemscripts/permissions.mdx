@@ -1,7 +1,6 @@
 ---
-icon: "crown"
 title: "🔒 Permissions"
-description: "How To Handle Permissions With Fivem Resources"
+description: "How To Handle Permissions With All  Resources"
 ---
 
 You Can Setup GLOBAL permissions in the bridge. This means Access to ALL of the scripts
@@ -31,10 +30,10 @@ Config.Override = {
 }
 ```
 
-/
+<Warning>
+  Make sure to remove the license: before the id or this will not work
+</Warning>
 
-<ResponseField name="license" type="string" default="'817cba100dcb37f76b2c483f901fc54erf7a25b8'" required>
-  License
-
+<ResponseField name="license" type="string" required>
   Example:   `'817cba100dcb37f76b2c483f901fc54erf7a25b8'`
 </ResponseField>
