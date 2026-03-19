@@ -24,8 +24,11 @@
           {
             "group": "Fivem Scripts",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "fivemscripts/permissions",
+              {
+                "group": "OmniCore",
+                "pages": []
+              }
             ]
           },
           {
