@@ -1,0 +1,63 @@
+---
+title: "🔒 Locations"
+description: "Add Custom Locations "
+---
+
+You Can add locations even if you aren't in game
+
+## 📁 Step 1: Navigate To Omnicore Resource
+
+Go To omnicore folder:
+
+> /omnicore
+
+Inside, you should see:
+
+<Frame>
+  <img
+    src="/images/om-1.png"
+    alt="Pb"
+    lightAlt="Pb"
+    darkAlt="Pb"
+    className="hidden dark:block"
+  />
+  <img
+    src="/images/om.png"
+    alt="Pb"
+    lightAlt="Pb"
+    darkAlt="Pb"
+    className="dark:hidden"
+  />
+</Frame>
+
+## 📁 Step 2: Navigate To Server Folder
+
+> /pimzu-bridge/server
+
+Inside, you should see:
+
+<Frame>
+  <img
+    src="/images/in.png"
+    alt="Pb"
+    lightAlt="Pb"
+    darkAlt="Pb"
+  />
+</Frame>
+
+## **⚙️** Step 3: Open Locations
+
+> /pimzu-bridge/server/locations.lua
+
+## 🗝️ Step 3: Add Custom Locations
+
+```lua config.lua
+locations = {
+    {Name = 'Custom Added', Coords = vector3(2089.4, 6253.14, 1746.84)},
+	{Name = 'Cult Hideout', Coords = vector3(-1085.1, 4915.96, 214.68)},
+}
+```
+
+## 🔄 Step 4: Restart Omnicore
+
+> /ensure omnicore
