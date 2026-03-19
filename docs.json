@@ -69,10 +69,7 @@
       }
     ]
   },
-  "logo": {
-    "light": "/images/logo.png",
-    "dark": "/images/logo.png"
-  },
+  "logo": "/images/logo.png",
   "navbar": {
     "links": [
       {
