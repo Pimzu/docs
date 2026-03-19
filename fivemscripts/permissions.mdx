@@ -1,12 +1,12 @@
 ---
 icon: "crown"
-title: "Permissions"
+title: "🔒 Permissions"
 description: "How To Handle Permissions With Fivem Resources"
 ---
 
 You Can Setup GLOBAL permissions in the bridge. This means Access to ALL of the scripts
 
-## Step 1: Navigate To Bridge Resource
+## 📁 Step 1: Navigate To Bridge Resource
 
 Go To pimzu-bridge folder:
 
@@ -18,19 +18,23 @@ Inside, you should see:
   ![Pb](/images/pb.png)
 </Frame>
 
-## Step 2: Open Config
+## ⚙️ Step 2: Open Config
 
 > /pimzu-bridge/config.lua
 
+## 🗝️ Step 3: Add Licenses
+
 ```lua config.lua
 Config.Override = {
-	'license1',
-	'license2'
+	'9a7c1b20dcb37f76b2c483f901fc54ef7a25c91',
+	'4f2d8e11abc37f76b2c483f901fc54ef7b91d2a'
 }
 ```
 
+/
+
 <ResponseField name="license" type="string" default="'817cba100dcb37f76b2c483f901fc54erf7a25b8'" required>
-  License 
+  License
 
   Example:   `'817cba100dcb37f76b2c483f901fc54erf7a25b8'`
 </ResponseField>
