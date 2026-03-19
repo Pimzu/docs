@@ -11,12 +11,24 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Fivem Scripts",
-        "pages": [
-          "fivemscripts/permissions",
+        "tab": "Fivem",
+        "groups": [
           {
-            "group": "Omnicore",
-            "pages": []
+            "group": "Getting Started",
+            "pages": [
+              "fivemscripts/permissions"
+            ]
+          },
+          {
+            "group": "Resources",
+            "pages": [
+              {
+                "group": "OmniCore",
+                "pages": [
+                  "custom-locations"
+                ]
+              }
+            ]
           }
         ]
       }
