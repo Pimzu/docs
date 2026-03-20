@@ -16,9 +16,9 @@
           {
             "group": "Getting Started",
             "pages": [
-              "fivem/permissions-copied-2",
+              "fivem/installation",
               "fivem/permissions",
-              "fivem/untitled-page"
+              "fivem/support"
             ]
           },
           {
@@ -27,7 +27,7 @@
               {
                 "group": "OmniCore",
                 "pages": [
-                  "fivem/permissions-copied-1"
+                  "fivem/omnicore/locations"
                 ]
               }
             ]
