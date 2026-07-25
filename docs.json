@@ -32,7 +32,16 @@
               },
               {
                 "group": "PedSense",
-                "pages": []
+                "pages": [
+                  {
+                    "group": "Client Exports",
+                    "pages": []
+                  },
+                  {
+                    "group": "Server Exports",
+                    "pages": []
+                  }
+                ]
               }
             ]
           }
