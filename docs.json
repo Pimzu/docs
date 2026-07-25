@@ -29,6 +29,10 @@
                 "pages": [
                   "fivem/omnicore/locations"
                 ]
+              },
+              {
+                "group": "PedSense",
+                "pages": []
               }
             ]
           }
