@@ -33,7 +33,8 @@
               {
                 "group": "PedSense",
                 "pages": [
-                  "stationary",
+                  "introduction",
+                  "untitled-page",
                   {
                     "group": "Client Exports",
                     "pages": []
