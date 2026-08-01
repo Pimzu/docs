@@ -33,9 +33,9 @@
               {
                 "group": "PedSense",
                 "pages": [
-                  "pedsense",
-                  "untitled-page",
-                  "voices",
+                  "fivem/pedsense/pedsense",
+                  "fivem/pedsense/untitled-page",
+                  "fivem/pedsense/voices",
                   {
                     "group": "Client Exports",
                     "pages": []
