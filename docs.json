@@ -56,7 +56,18 @@
                 "group": "Multicharacter",
                 "pages": [
                   "fivem/multicharacter",
-                  "fivem/multicharacter/installation"
+                  "fivem/multicharacter/installation",
+                  "untitled-page",
+                  {
+                    "group": "Client Exports",
+                    "pages": []
+                  },
+                  {
+                    "group": "Client Functions",
+                    "pages": [
+                      "untitled-page-2"
+                    ]
+                  }
                 ]
               }
             ]

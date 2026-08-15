@@ -1,0 +1,25 @@
+---
+title: "How To Use Client Functions"
+sidebarTitle: "❓ How To Use"
+---
+
+> Navigate To multicharacter/client/custom.lua
+
+The Event That Happens ONCE A New Character is Created
+
+```lua
+function CreateChar(data)
+	print(json.encode(data, {indent = true}) -- To See All Data
+	
+    return true  -- Return false To Stop Default Skin Menu Opening
+end
+```
+
+The Event That Happens ONCE A Player Signs Into An Existing Character
+
+```lua
+function ChooseChar()
+
+    -- When Player Logs In To their Char
+end
+```
