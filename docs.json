@@ -25,6 +25,12 @@
             "group": "Resources",
             "pages": [
               {
+                "group": "Consume",
+                "pages": [
+                  "fivem/pedsense/pedsense-2"
+                ]
+              },
+              {
                 "group": "OmniCore",
                 "pages": [
                   "fivem/omnicore/locations"
@@ -44,6 +50,13 @@
                     "group": "Server Exports",
                     "pages": []
                   }
+                ]
+              },
+              {
+                "group": "Multicharacter",
+                "pages": [
+                  "multicharacter",
+                  "untitled-page"
                 ]
               }
             ]
