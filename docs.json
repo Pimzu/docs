@@ -59,13 +59,21 @@
                   "fivem/multicharacter/installation",
                   "untitled-page",
                   {
-                    "group": "Client Exports",
-                    "pages": []
+                    "group": "Client Event",
+                    "pages": [
+                      "untitled-page-3"
+                    ]
                   },
                   {
                     "group": "Client Functions",
                     "pages": [
                       "untitled-page-2"
+                    ]
+                  },
+                  {
+                    "group": "Server Event",
+                    "pages": [
+                      "untitled-page-3-2"
                     ]
                   }
                 ]
