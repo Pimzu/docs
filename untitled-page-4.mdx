@@ -9,26 +9,28 @@ Spawn Ped
 Spawns a ped using Pedsense and returns the created ped entity and processed ped data.
 
 ```lua
-local ped = exports["pedsense"]:AddStationary("ShopKeeper", {
+local ped, data = exports["pedsense"]:spawn({
 
     ------------------------------------------------------------------
     -- PED APPEARANCE
     ------------------------------------------------------------------
 
     -- OPTION 1: Use a normal GTA ped model.
-    -- Use this if you DO NOT want to use a saved Pedsense Outfit/Face.
+    -- Use this if you just want to spawn a ped model without
+    -- using a saved Pedsense Outfit or Face.
     Model = "a_m_m_business_01",
 
     -- OR
 
     -- OPTION 2: Use an Outfit and/or Face saved inside Pedsense.
-    -- Outfit = the NAME of the saved Pedsense outfit.
+
+    -- Name of the saved Pedsense Outfit you want to use.
     Outfit = "Shop Keeper",
 
-    -- Face = the NAME of the saved Pedsense face.
+    -- Name of the saved Pedsense Face you want to use.
     Face = "Shop Keeper",
 
-    -- Gender is required when using Pedsense Outfit/Face.
+    -- Gender used when loading the Outfit / Face.
     -- Use "male" or "female".
     Gender = "male",
 
@@ -39,7 +41,9 @@ local ped = exports["pedsense"]:AddStationary("ShopKeeper", {
 
     -- Where the ped will spawn.
     -- vector4(X, Y, Z, Heading)
-    -- Heading controls which direction the ped faces.
+    --
+    -- X / Y / Z = World position
+    -- Heading   = Direction the ped will face
     Coords = vector4(
         24.47,      -- X
         -1346.62,   -- Y
@@ -52,8 +56,13 @@ local ped = exports["pedsense"]:AddStationary("ShopKeeper", {
     -- SYNC
     ------------------------------------------------------------------
 
-    -- true  = Synchronize the ped between players.
-    -- false = Create the ped locally for the client.
+    -- Controls whether the ped is networked.
+    --
+    -- true  = Ped is networked/synchronized between players.
+    -- false = Ped only exists locally for this client.
+    --
+    -- Use true when other players need to see/interact with the
+    -- same networked ped.
     Sync = true,
 
 
@@ -62,21 +71,22 @@ local ped = exports["pedsense"]:AddStationary("ShopKeeper", {
     ------------------------------------------------------------------
 
     -- OPTIONAL
-    -- Displays 3D text above the ped.
+    -- Displays 3D text above the spawned ped.
     Text = {
-        -- Text that will be displayed.
+
+        -- Text displayed above the ped.
         Message = "Shop Keeper",
 
         -- Hex color of the text.
         Color = "#FFFFFF",
 
-        -- GTA/FiveM text font.
+        -- GTA/FiveM font ID.
         Font = 0,
 
         -- Size of the text.
         Size = 0.35,
 
-        -- How high above the ped the text should appear.
+        -- Vertical position of the text above the ped.
         Top = 1.0
     },
 
@@ -86,9 +96,10 @@ local ped = exports["pedsense"]:AddStationary("ShopKeeper", {
     ------------------------------------------------------------------
 
     -- OPTIONAL
-    -- Creates a map blip attached to the ped.
+    -- Creates a map blip attached to the spawned ped.
     Blip = {
-        -- Name displayed when viewing the blip.
+
+        -- Name displayed for the blip.
         Title = "Shop",
 
         -- GTA/FiveM blip sprite ID.
@@ -107,22 +118,22 @@ local ped = exports["pedsense"]:AddStationary("ShopKeeper", {
     ------------------------------------------------------------------
 
     -- OPTIONAL
-    -- Controls how the spawned ped behaves.
+    -- Controls the behavior/properties of the spawned ped.
     Flags = {
 
-        -- true = Prevent the ped from moving from its position.
-        -- false = Allow the ped to move normally.
+        -- true  = Ped stays in its current position.
+        -- false = Ped is allowed to move.
         Freeze = true,
 
-        -- true = Ped cannot take damage or die.
+        -- true  = Ped cannot take damage or die.
         -- false = Ped can take damage normally.
         Invincible = true,
 
-        -- true = Allow the ped to react/become alert.
+        -- true  = Ped can react/become alert.
         -- false = Prevent normal alert reactions.
         Alert = false,
 
-        -- true = Ped has normal collision.
+        -- true  = Normal collision is enabled.
         -- false = Players/entities can pass through the ped.
         Collision = true
     }
