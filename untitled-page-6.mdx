@@ -1,0 +1,76 @@
+---
+title: "Face Exports"
+---
+
+### Get Face
+
+Gets a saved face from the Pedsense face library.
+
+**By Name:**
+
+```text
+local face, name, tag, key = exports["pedsense"]:getface({
+	Gender = "female",
+	Name = "Employee"
+
+})
+```
+
+**By Tag:**
+
+```text
+local face, name, tag, key = exports["pedsense"]:getface({
+	Gender = "female",
+	Tag = "Workers"
+})
+```
+
+**urns:**
+
+- `face` — Saved face data.<br />
+- `name` — Saved face name.<br />
+- `tag` — Face tag.<br />
+- `key` — Face key.<br />
+
+---
+
+### Wear Face
+
+Gets a saved face and immediately applies it to a ped.
+
+```text
+local success = exports["pedsense"]:wearface({
+	Ped = ped,
+	Gender = "female",
+	Name = "Employee"
+})
+```
+
+**Returns:**
+
+- `success` — `true` when the face was successfully applied.<br />
+
+---
+
+### Set Face
+
+Sets a Pedsense face on a ped.
+
+```text
+local ped, gender = exports["pedsense"]:setface({
+	Ped = ped,
+	Gender = "female",
+	Face = "Employee"
+})
+```
+
+A tag can also be supplied:
+
+```text
+exports["pedsense"]:setface({
+	Ped = ped,
+	Gender = "female",
+	Face = "Employee",
+	Tag = "Workers"
+})
+```

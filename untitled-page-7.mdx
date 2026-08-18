@@ -1,0 +1,103 @@
+---
+title: "Voice Exports"
+---
+
+### Speak
+
+Makes any valid ped entity speak using a saved Pedsense voice line.
+
+```lua
+local success, result = exports["pedsense"]:Speak(
+	ped,
+	"Showcase",
+	"Greeting",
+	1.0
+)
+```
+
+**Parameters:**
+
+- `ped` — Ped entity that should speak.<br />
+- `voiceId` — Saved Pedsense voice.<br />
+- `label` — Audio label/line to play.<br />
+- `volume` — Playback volume from `0.0` to `2.0`.<br />
+
+You can explicitly specify a gender catalog:
+
+```lua
+exports["pedsense"]:Speak(
+	ped,
+	"male:barista",
+	"Greeting",
+	1.0
+)
+```
+
+Or:
+
+```lua
+exports["pedsense"]:Speak(ped,
+	"female:cashier",
+	"Welcome",
+	1.0
+)
+```
+
+---
+
+### Play Ped Voice
+
+Plays a voice line using a Pedsense ped ID.
+
+```lua
+exports["pedsense"]:PlayPedVoice(pedId, {
+	voice = "Showcase",
+	label = "Greeting"
+})
+```
+
+For synchronized playback:
+
+```lua
+exports["pedsense"]:PlayPedVoice(pedId, {
+	voice = "Showcase",
+	label = "Greeting",
+	sync = true
+})
+```
+
+---
+
+### Stop Ped Voice
+
+Stops voice audio currently playing from a Pedsense ped.
+
+```lua
+local stopped = exports["pedsense"]:StopPedVoice(pedId)
+```
+
+**Returns:**
+
+- `true` when matching audio was stopped.<br />
+- `false` when no matching audio was playing.<br />
+
+---
+
+### Is Ped Voice Playing
+
+Checks whether a Pedsense ped currently has voice audio playing.
+
+```lua
+local playing = exports["pedsense"]:IsPedVoicePlaying(pedId)
+
+if playing then
+
+print("Ped is currently speaking")
+
+end
+```
+
+**Returns:**
+
+- `true` — Voice audio is playing.<br />
+- `false` — Voice audio is not playing.
