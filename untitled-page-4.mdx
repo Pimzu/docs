@@ -9,10 +9,123 @@ Spawn Ped
 Spawns a ped using Pedsense and returns the created ped entity and processed ped data.
 
 ```lua
-local ped, data = exports["pedsense"]:spawn({
+local ped = exports["pedsense"]:AddStationary("ShopKeeper", {
+
+    ------------------------------------------------------------------
+    -- PED APPEARANCE
+    ------------------------------------------------------------------
+
+    -- OPTION 1: Use a normal GTA ped model.
+    -- Use this if you DO NOT want to use a saved Pedsense Outfit/Face.
     Model = "a_m_m_business_01",
-    Coords = vector4(215.76, -810.12, 30.73, 157.0),
-    Sync = true
+
+    -- OR
+
+    -- OPTION 2: Use an Outfit and/or Face saved inside Pedsense.
+    -- Outfit = the NAME of the saved Pedsense outfit.
+    Outfit = "Shop Keeper",
+
+    -- Face = the NAME of the saved Pedsense face.
+    Face = "Shop Keeper",
+
+    -- Gender is required when using Pedsense Outfit/Face.
+    -- Use "male" or "female".
+    Gender = "male",
+
+
+    ------------------------------------------------------------------
+    -- LOCATION
+    ------------------------------------------------------------------
+
+    -- Where the ped will spawn.
+    -- vector4(X, Y, Z, Heading)
+    -- Heading controls which direction the ped faces.
+    Coords = vector4(
+        24.47,      -- X
+        -1346.62,   -- Y
+        29.50,      -- Z
+        271.0       -- Heading
+    ),
+
+
+    ------------------------------------------------------------------
+    -- SYNC
+    ------------------------------------------------------------------
+
+    -- true  = Synchronize the ped between players.
+    -- false = Create the ped locally for the client.
+    Sync = true,
+
+
+    ------------------------------------------------------------------
+    -- 3D TEXT
+    ------------------------------------------------------------------
+
+    -- OPTIONAL
+    -- Displays 3D text above the ped.
+    Text = {
+        -- Text that will be displayed.
+        Message = "Shop Keeper",
+
+        -- Hex color of the text.
+        Color = "#FFFFFF",
+
+        -- GTA/FiveM text font.
+        Font = 0,
+
+        -- Size of the text.
+        Size = 0.35,
+
+        -- How high above the ped the text should appear.
+        Top = 1.0
+    },
+
+
+    ------------------------------------------------------------------
+    -- MAP BLIP
+    ------------------------------------------------------------------
+
+    -- OPTIONAL
+    -- Creates a map blip attached to the ped.
+    Blip = {
+        -- Name displayed when viewing the blip.
+        Title = "Shop",
+
+        -- GTA/FiveM blip sprite ID.
+        Sprite = 52,
+
+        -- GTA/FiveM blip color ID.
+        Color = 2,
+
+        -- Size of the blip.
+        Scale = 0.8
+    },
+
+
+    ------------------------------------------------------------------
+    -- PED FLAGS
+    ------------------------------------------------------------------
+
+    -- OPTIONAL
+    -- Controls how the spawned ped behaves.
+    Flags = {
+
+        -- true = Prevent the ped from moving from its position.
+        -- false = Allow the ped to move normally.
+        Freeze = true,
+
+        -- true = Ped cannot take damage or die.
+        -- false = Ped can take damage normally.
+        Invincible = true,
+
+        -- true = Allow the ped to react/become alert.
+        -- false = Prevent normal alert reactions.
+        Alert = false,
+
+        -- true = Ped has normal collision.
+        -- false = Players/entities can pass through the ped.
+        Collision = true
+    }
 })
 ```
 
