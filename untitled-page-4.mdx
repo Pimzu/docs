@@ -150,36 +150,7 @@ Route
 Starts a saved Pedsense route on a ped.
 
 ```lua
-exports["pedsense"]:Route(
-
-    ------------------------------------------------------------------
-    -- PED
-    ------------------------------------------------------------------
-
-    -- The ped that should follow the route.
-    ped,
-
-
-    ------------------------------------------------------------------
-    -- ROUTE NAME
-    ------------------------------------------------------------------
-
-    -- Name of the route saved inside Pedsense.
-    "My Route",
-
-
-    ------------------------------------------------------------------
-    -- ROUTE CALLBACK
-    ------------------------------------------------------------------
-
-    -- The callback allows you to run your own code when the ped
-    -- reaches different steps/indexes in the route.
-    function(data)
-
-        ------------------------------------------------------------------
-        -- data.Index
-        ------------------------------------------------------------------
-
+exports["pedsense"]:Route(ped, routeName, function(data)
         -- data.Index tells you which route step is currently being
         -- triggered.
         --
@@ -234,16 +205,7 @@ exports["pedsense"]:Route(
         -- returned for the current route step.
         print(json.encode(data))
 
-    end,
-
-
-    ------------------------------------------------------------------
-    -- DELETE PED ON STOP
-    ------------------------------------------------------------------
-
-    -- true  = Delete the ped when the route stops/finishes.
-    -- false = Leave the ped spawned.
-    false
+    end, - deletePedOnStop
 )
 ```
 
