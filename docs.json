@@ -44,7 +44,9 @@
                   "fivem/pedsense/voices",
                   {
                     "group": "Client Exports",
-                    "pages": []
+                    "pages": [
+                      "untitled-page-4"
+                    ]
                   },
                   {
                     "group": "Server Exports",
