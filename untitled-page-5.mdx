@@ -9,21 +9,10 @@ Gets an outfit from the Pedsense outfit library.
 **By Name:**
 
 ```lua
-local outfit, name, tag, key = exports["pedsense"]:getoutfit({
+local outfit = exports["pedsense"]:getoutfit({
 	Gender = "male",
-	
-	Name = "Security"
-
-})
-```
-
-**By Tag:**
-
-```lua
-local outfit, name, tag, key = exports["pedsense"]:getoutfit({
-	Gender = "male",
+	Name = "Security",
 	Tag = "Police"
-
 })
 ```
 
@@ -56,33 +45,3 @@ local success = exports["pedsense"]:wearoutfit({
 - `success` — `true` when the outfit was successfully applied.<br />
 
 ---
-
-### Set Outfit
-
-Sets a Pedsense outfit on a ped.
-
-```lua
-local ped, gender = exports["pedsense"]:setoutfit({
-	Ped = ped,
-	
-	Gender = "male",
-	
-	Outfit = "Security"
-
-})
-```
-
-A tag can also be supplied:
-
-```lua
-local ped, gender = exports["pedsense"]:setoutfit({
-	Ped = ped,
-	
-	Gender = "male",
-	
-	Outfit = "Security",
-	
-	Tag = "Police"
-
-})
-```

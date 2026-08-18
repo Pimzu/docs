@@ -8,25 +8,50 @@ Manage custom NPC voice packs for PedSense. Add your own voice actors, organize 
 
 Go to folder and decide gender:
 
-> html/voices/\[male\] or \[female\]
+<Tree>
+  <Tree.Folder name="html">
+    <Tree.Folder name="voices">
+      <Tree.Folder name="male" />
+      <Tree.Folder name="female" />
+    </Tree.Folder>
+  </Tree.Folder>
+</Tree>
 
 ## ➕ Step 2: Create A New Folder
 
 Name the folder:
 
-<Frame>
-  ![Image](/images/image-5.png "Image")
-</Frame>
+<Tree>
+  <Tree.Folder name="html">
+    <Tree.Folder name="voices">
+      <Tree.Folder name="male">
+        <Tree.Folder name="example" />
+      </Tree.Folder>
+      <Tree.Folder name="female">
+        <Tree.Folder name="example" />
+      </Tree.Folder>
+    </Tree.Folder>
+  </Tree.Folder>
+</Tree>
 
 ## 🫳 Step 3: Put All Audio files in this folder
 
-<Frame>
-  <Tip>
-    You Can Create Ai Voices Using [Eleven Labs](https://elevenlabs.io/app/home) OR Using real voices
-  </Tip>
-
-  ![Image](/images/image-6.png "Image")
-</Frame>
+<Tree>
+  <Tree.Folder name="html">
+    <Tree.Folder name="voices">
+      <Tree.Folder name="male">
+        <Tree.Folder name="example">
+          <Tree.File name="hello.mp3" />
+          <Tree.File name="goodbye.mp3" />
+        </Tree.Folder>
+      </Tree.Folder>
+      <Tree.Folder name="female">
+        <Tree.File name="hello.mp3" />
+        <Tree.File name="goodbye.mp3" />
+      </Tree.Folder>
+    </Tree.Folder>
+  </Tree.Folder>
+</Tree>
 
 <Note>
   Try to keep the names short you will need them later
