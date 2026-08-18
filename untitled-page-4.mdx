@@ -265,38 +265,3 @@ local ped = exports["pedsense"]:spawn({
 
 exports["pedsense"]:Route(ped, "Walk To Store")
 ```
-
-### Add Stationary Ped
-
-Adds or spawns a stationary Pedsense NPC.
-
-```lua
-exports["pedsense"]:AddStationary("ShopKeeper", {
-    Model = "a_m_m_business_01",
-    Coords = vector4(24.47, -1346.62, 29.50, 271.0),
-    Sync = true
-})
-```
-
-**Parameters:**
-
-- `name` — Unique name for the stationary NPC.
-- `data` — Configuration used to create the NPC.
-
-When `Sync = true`, Pedsense uses its synchronized stationary ped system.
-
-### Delete Stationary Ped
-
-Deletes a stationary NPC by its saved name.
-
-```lua
-local success = exports["pedsense"]:DeleteStationary("ShopKeeper")
-```
-
-**Parameters:**
-
-- `name` — Name of the stationary NPC.<br />
-
-**Returns:**
-
-- `success` — Whether the NPC was successfully deleted.
