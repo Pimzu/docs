@@ -151,11 +151,98 @@ Starts a saved Pedsense route on a ped.
 
 ```lua
 exports["pedsense"]:Route(
+
+    ------------------------------------------------------------------
+    -- PED
+    ------------------------------------------------------------------
+
+    -- The ped that should follow the route.
     ped,
+
+
+    ------------------------------------------------------------------
+    -- ROUTE NAME
+    ------------------------------------------------------------------
+
+    -- Name of the route saved inside Pedsense.
     "My Route",
+
+
+    ------------------------------------------------------------------
+    -- ROUTE CALLBACK
+    ------------------------------------------------------------------
+
+    -- The callback allows you to run your own code when the ped
+    -- reaches different steps/indexes in the route.
     function(data)
-        print("Route step triggered")
+
+        ------------------------------------------------------------------
+        -- data.Index
+        ------------------------------------------------------------------
+
+        -- data.Index tells you which route step is currently being
+        -- triggered.
+        --
+        -- You can check the Index to make different route steps
+        -- perform different actions.
+
+
+        -- ROUTE STEP 1
+        if data.Index == 1 then
+
+            print("Ped reached route step 1")
+
+            -- Put any custom code you want here.
+            --
+            -- Example:
+            -- TriggerEvent("myresource:firstStep")
+
+        end
+
+
+        -- ROUTE STEP 2
+        if data.Index == 2 then
+
+            print("Ped reached route step 2")
+
+            -- Example custom code:
+            -- TriggerServerEvent("myresource:secondStep")
+
+        end
+
+
+        -- ROUTE STEP 3
+        if data.Index == 3 then
+
+            print("Ped reached route step 3")
+
+            -- You can access the ped here as well.
+            TaskTurnPedToFaceEntity(
+                ped,
+                PlayerPedId(),
+                1000
+            )
+
+        end
+
+
+        ------------------------------------------------------------------
+        -- VIEW ALL CALLBACK DATA
+        ------------------------------------------------------------------
+
+        -- Useful while developing to see everything Pedsense
+        -- returned for the current route step.
+        print(json.encode(data))
+
     end,
+
+
+    ------------------------------------------------------------------
+    -- DELETE PED ON STOP
+    ------------------------------------------------------------------
+
+    -- true  = Delete the ped when the route stops/finishes.
+    -- false = Leave the ped spawned.
     false
 )
 ```
