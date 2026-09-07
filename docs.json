@@ -77,6 +77,27 @@
                     ]
                   }
                 ]
+              },
+              {
+                "group": "Payments",
+                "pages": [
+                  "fivem/payments",
+                  "fivem/payments/stripe",
+                  {
+                    "group": "Client",
+                    "pages": [
+                      "fivem/payments/client/exports",
+                      "fivem/payments/client/events"
+                    ]
+                  },
+                  {
+                    "group": "Server",
+                    "pages": [
+                      "fivem/payments/server/exports",
+                      "fivem/payments/server/events"
+                    ]
+                  }
+                ]
               }
             ]
           }

@@ -1,0 +1,17 @@
+---
+title: "Server Events"
+---
+
+Create a REAL Payment
+
+```lua
+TriggerEvent('payments:server:Charge', playerId, amount, description)
+```
+
+---
+
+Create a FAKE Payment
+
+```lua
+TriggerEvent('payments:server:Fake', playerId, amount, description)
+```

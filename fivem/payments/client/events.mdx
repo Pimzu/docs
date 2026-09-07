@@ -1,0 +1,23 @@
+---
+title: "Client Events"
+---
+
+Create a REAL Payment
+
+```lua
+TriggerEvent('payments:charge', {
+    amount = 25.00,
+    description = 'Vehicle Purchase'
+})
+```
+
+---
+
+Create a FAKE Payment
+
+```lua
+TriggerEvent('payments:fake', {
+    amount = 25.00,
+    description = 'Test Purchase'
+})
+```

@@ -1,0 +1,17 @@
+---
+title: "Server Exports "
+---
+
+Create a REAL Payment
+
+```lua
+local Paid = exports['payments']:Charge(playerId, amount, description)
+```
+
+---
+
+Create a FAKE Payment
+
+```lua
+local Paid = exports['payments']:Fake(playerId, amount, description)
+```
