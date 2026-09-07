@@ -5,7 +5,10 @@ title: "Server Events"
 Create a REAL Payment
 
 ```lua
-TriggerEvent('payments:server:Charge', playerId, amount, description)
+TriggerEvent('payments:server:Charge', playerID, {
+    amount = 23,
+    description = 'Test Description'
+})
 ```
 
 ---
@@ -13,5 +16,8 @@ TriggerEvent('payments:server:Charge', playerId, amount, description)
 Create a FAKE Payment
 
 ```lua
-TriggerEvent('payments:server:Fake', playerId, amount, description)
+TriggerEvent('payments:server:Fake', playerID, {
+    amount = 23,
+    description = 'Test Description'
+})
 ```
